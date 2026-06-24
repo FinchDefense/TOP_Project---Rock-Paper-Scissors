@@ -8,9 +8,14 @@
 
         const getComputerChoice = function() {
             let CPU_num = Math.random();
-            if (num <= 0.33) return "rock";
-            else if ((0.33 < num) && (num <= 0.67)) return "paper";
+            if (CPU_num <= 0.33) return "rock";
+            else if ((0.33 < CPU_num) && (CPU_num <= 0.67)) return "paper";
             else return "scissors";
+        }
+
+        function getHumanChoice() {
+            let human_num = prompt("Please type rock, paper, or scissors: ");
+            return human_num;
         }
 
     </script>
