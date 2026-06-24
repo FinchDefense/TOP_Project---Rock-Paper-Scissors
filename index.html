@@ -6,7 +6,13 @@
         let humanScore = 0;
         let computerScore = 0;
 
-        
+        const getComputerChoice = function() {
+            let CPU_num = Math.random();
+            if (num <= 0.33) return "rock";
+            else if ((0.33 < num) && (num <= 0.67)) return "paper";
+            else return "scissors";
+        }
+
     </script>
 
     <meta charset="UTF-8">
