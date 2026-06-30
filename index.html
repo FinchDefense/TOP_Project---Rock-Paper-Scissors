@@ -21,11 +21,10 @@
         results.appendChild(human);
         results.appendChild(computer);
         
-        human.textContent = `Human Score: ${humanScore}`;
-        computer.textContent = `Computer Score: ${computerScore}`;
-
-
-
+        function updateScore() {
+            human.textContent = `Human Score: ${humanScore}`;
+            computer.textContent = `Computer Score: ${computerScore}`;
+        }
 
 
         function getComputerChoice() {
