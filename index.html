@@ -87,6 +87,13 @@
             playRound(scissors.textContent, getComputerChoice());
         });
 
+        play_again.textContent = "Play Again";
+        play_again.addEventListener('click', () => {
+            humanScore = 0;
+            computerScore = 0;
+            console.clear();
+        })
+
         document.body.appendChild(rock);
         document.body.appendChild(paper);
         document.body.appendChild(scissors);
