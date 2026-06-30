@@ -13,14 +13,24 @@
         scissors = document.createElement("button");
 
         rock.textContent = "Rock";
+        rock.addEventListener('click', playRound(rock, ))
+
         paper.textContent = "Paper";
+
         scissors.textContent = "Scissors";
 
         document.body.appendChild(rock);
         document.body.appendChild(paper);
         document.body.appendChild(scissors);
-        
 
+        
+        function getComputerChoice() {
+            const choices = ["rock", "paper", "scissors"];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+                
+        
         function playRound(humanChoice, computerChoice) {
             if (
                 (humanChoice === "rock" && computerChoice === "scissors") ||
