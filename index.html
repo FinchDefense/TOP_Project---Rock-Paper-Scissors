@@ -7,6 +7,31 @@
 </head>
 <body>
     <script>
+        function getComputerChoice() {
+            const choices = ["rock", "paper", "scissors"];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+        
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(humanChoice, computerChoice) {
+            if (
+                (humanChoice === "rock" && computerChoice === "scissors") ||
+                (humanChoice === "paper" && computerChoice === "rock") ||
+                (humanChoice === "scissors" && computerChoice === "paper")
+            ) {
+                console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+                humanScore++;
+            } 
+            
+            else {
+                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+                computerScore++;
+            }
+        }
+        
         // 3 responsive buttons, using JS
         rock = document.createElement("button");
         paper = document.createElement("button");
@@ -23,29 +48,6 @@
         document.body.appendChild(paper);
         document.body.appendChild(scissors);
 
-        
-        function getComputerChoice() {
-            const choices = ["rock", "paper", "scissors"];
-            const randomIndex = Math.floor(Math.random() * 3);
-            return choices[randomIndex];
-        }
-                
-        
-        function playRound(humanChoice, computerChoice) {
-            if (
-                (humanChoice === "rock" && computerChoice === "scissors") ||
-                (humanChoice === "paper" && computerChoice === "rock") ||
-                (humanChoice === "scissors" && computerChoice === "paper")
-            ) {
-                console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
-                humanScore++;
-            } 
-            
-            else {
-                console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
-                computerScore++;
-            }
-        }
     </script>
 </body>
 </html>
