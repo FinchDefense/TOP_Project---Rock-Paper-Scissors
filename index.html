@@ -6,15 +6,14 @@
     <title>TOP: Rock Paper Scissors</title>
 </head>
 <body>
-    <div>
-        
-    </div>
-
+    
     <script>
         let humanScore = 0;
         let computerScore = 0;
 
-        const results = document.querySelector("div");
+        const results = document.createElement("div");
+        document.body.appendChild(results);
+
         const human = document.createElement("h3");
         const computer = document.createElement("h3");
 
