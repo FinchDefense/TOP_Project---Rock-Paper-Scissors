@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP: Rock Paper Scissors</title>
+</head>
+<body>
     <script>
-        let humanScore = 0;
-        let computerScore = 0;
+        // 3 responsive buttons, using JS
+        rock = document.createElement("button");
+        paper = document.createElement("button");
+        scissors = document.createElement("button");
 
-        function getComputerChoice() {
-            let CPU_num = Math.random();
-            if (CPU_num <= 0.33) return "rock";
-            else if ((0.33 < CPU_num) && (CPU_num <= 0.67)) return "paper";
-            else return "scissors";
-        }
+        rock.textContent = "Rock";
+        paper.textContent = "Paper";
+        scissors.textContent = "Scissors";
 
-        function getHumanChoice() {
-            let human_num = prompt("Please type rock, paper, or scissors: ");
-            return human_num.toLowerCase();
-        }
+        document.body.appendChild(rock);
+        document.body.appendChild(paper);
+        document.body.appendChild(scissors);
+        
 
         function playRound(humanChoice, computerChoice) {
             if (
@@ -33,30 +36,6 @@
                 computerScore++;
             }
         }
-
-        function playGame() {
-            for (let i=0; i<5; i++) {
-                const humanSelection = getHumanChoice();
-                const computerSelection = getComputerChoice();
-
-                playRound(humanSelection, computerSelection);
-            }
-
-            if (humanScore > computerScore) {
-                console.log("You win!!!!!!! Congratulations!")
-            }
-            else {
-                console.log("Sorry, you lost! Better luck next time!")
-            }
-        }
-
     </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOP: Rock Paper Scissors</title>
-</head>
-<body>
-    
 </body>
 </html>
