@@ -75,22 +75,34 @@
         rock.textContent = "rock";
         rock.addEventListener('click', () => {
             playRound(rock.textContent, getComputerChoice());
+            updateScore();
+            checkIfGameOver();
         });
 
         paper.textContent = "paper";
         paper.addEventListener('click', () => {
             playRound(paper.textContent, getComputerChoice());
+            updateScore();
+            checkIfGameOver();
         });
 
         scissors.textContent = "scissors";
         scissors.addEventListener('click', () => {
             playRound(scissors.textContent, getComputerChoice());
+            updateScore();
+            checkIfGameOver();
         });
 
         play_again.textContent = "Play Again";
         play_again.addEventListener('click', () => {
             humanScore = 0;
             computerScore = 0;
+            human.textContent = `Human Score: ${humanScore}`;
+            computer.textContent = `Computer Score: ${computerScore}`;
+
+            humanVictory.textContent = "";
+            computerVictory.textContent = "";
+
             console.clear();
         })
 
