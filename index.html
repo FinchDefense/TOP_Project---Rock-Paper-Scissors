@@ -7,9 +7,10 @@
 </head>
 <body>
     <script>
+
         function getComputerChoice() {
             const choices = ["rock", "paper", "scissors"];
-            const randomIndex = Math.floor(Math.random() * 3);
+            let randomIndex = Math.floor(Math.random() * 3);
             return choices[randomIndex];
         }
         
@@ -17,7 +18,9 @@
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            if (
+            if (humanChoice === computerChoice) console.log(`Tie! ${humanChoice} is equal to ${computerChoice}`);
+
+            else if (
                 (humanChoice === "rock" && computerChoice === "scissors") ||
                 (humanChoice === "paper" && computerChoice === "rock") ||
                 (humanChoice === "scissors" && computerChoice === "paper")
@@ -37,14 +40,20 @@
         paper = document.createElement("button");
         scissors = document.createElement("button");
 
-        rock.textContent = "Rock";
-        rock.addEventListener('click', playRound(rock, getComputerChoice()));
+        rock.textContent = "rock";
+        rock.addEventListener('click', () => {
+            playRound(rock.textContent, getComputerChoice());
+        });
 
-        paper.textContent = "Paper";
-        paper.addEventListener('click', playRound(paper, getComputerChoice()));
+        paper.textContent = "paper";
+        paper.addEventListener('click', () => {
+            playRound(paper.textContent, getComputerChoice());
+        });
 
-        scissors.textContent = "Scissors";
-        scissors.addEventListener('click', playRound(scissors, getComputerChoice()));
+        scissors.textContent = "scissors";
+        scissors.addEventListener('click', () => {
+            playRound(scissors.textContent, getComputerChoice());
+        });
 
         document.body.appendChild(rock);
         document.body.appendChild(paper);
