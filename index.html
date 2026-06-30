@@ -42,8 +42,7 @@
             if (computerScore === 5) {
                 computerVictory.textContent = "Sorry, you lost! Better luck next time :)";
 
-                if (!results.appendChild(computerVictory)) results.appendChild(computerVictory);
-)
+                if (!results.contains(computerVictory)) results.appendChild(computerVictory);
             }
         }
 
