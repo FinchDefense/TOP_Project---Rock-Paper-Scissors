@@ -17,6 +17,10 @@
         const human = document.createElement("h3");
         const computer = document.createElement("h3");
 
+        const humanVictory = document.createElement("h4");
+        const computerVictory = document.createElement("h4");
+
+
         human.textContent = `Human Score: ${humanScore}`;
         computer.textContent = `Computer Score: ${computerScore}`;
 
@@ -30,13 +34,11 @@
 
         function checkIfGameOver() {
             if (humanScore === 5) {
-                const humanVictory = document.createElement("h4");
                 humanVictory.textContent = "Congratulations! You have won!";
                 results.appendChild(humanVictory);
             }
 
             if (computerScore === 5) {
-                const computerVictory = document.createElement("h4");
                 computerVictory.textContent = "Sorry, you lost! Better luck next time :)";
                 results.appendChild(computerVictory);
             }
