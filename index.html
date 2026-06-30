@@ -6,7 +6,7 @@
     <title>TOP: Rock Paper Scissors</title>
 </head>
 <body>
-    
+
     <script>
         let humanScore = 0;
         let computerScore = 0;
@@ -16,6 +16,9 @@
 
         const human = document.createElement("h3");
         const computer = document.createElement("h3");
+
+        human.textContent = `Human Score: ${humanScore}`;
+        computer.textContent = `Computer Score: ${computerScore}`;
 
         results.appendChild(human);
         results.appendChild(computer);
@@ -63,10 +66,11 @@
             }
         }
         
-        // 3 responsive buttons, using JS
+        // 4 responsive buttons, using JS
         rock = document.createElement("button");
         paper = document.createElement("button");
         scissors = document.createElement("button");
+        play_again = document.createElement("button");
 
         rock.textContent = "rock";
         rock.addEventListener('click', () => {
