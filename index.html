@@ -35,12 +35,15 @@
         function checkIfGameOver() {
             if (humanScore === 5) {
                 humanVictory.textContent = "Congratulations! You have won!";
-                results.appendChild(humanVictory);
+                
+                if (!(results.contains(humanVictory))) results.appendChild(humanVictory);
             }
 
             if (computerScore === 5) {
                 computerVictory.textContent = "Sorry, you lost! Better luck next time :)";
-                results.appendChild(computerVictory);
+
+                if (!results.appendChild(computerVictory)) results.appendChild(computerVictory);
+)
             }
         }
 
