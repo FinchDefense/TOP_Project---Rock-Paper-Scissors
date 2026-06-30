@@ -38,11 +38,13 @@
         scissors = document.createElement("button");
 
         rock.textContent = "Rock";
-        rock.addEventListener('click', playRound(rock, ))
+        rock.addEventListener('click', playRound(rock, getComputerChoice()));
 
         paper.textContent = "Paper";
+        paper.addEventListener('click', playRound(paper, getComputerChoice()));
 
         scissors.textContent = "Scissors";
+        scissors.addEventListener('click', playRound(scissors, getComputerChoice()));
 
         document.body.appendChild(rock);
         document.body.appendChild(paper);
